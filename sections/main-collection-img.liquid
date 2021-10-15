@@ -1,0 +1,34 @@
+
+{% assign collection =  section.settings.collection_img  %}
+
+{% for product in collection.products limit:6 %}
+	{% for image in product.images %} 
+		{{ image.src | product_img_url: '150X' | img_tag: 'The Soap Store' }}
+
+	{% endfor %}
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "Only collection img",
+    "settings": [
+       {
+		"type" : "collection",
+		"id" : "collection_img",
+         "label" : "collection image"
+	    }
+     ],
+  "presets": [
+    {
+      "name": "Only collection img"
+    }
+  ]
+   
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

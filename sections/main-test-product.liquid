@@ -1,0 +1,27 @@
+<h2>{{ product.title }}</h2>
+
+<img src="{{ product.featured_image | img_url: '300px' }}">
+
+{% if section.settings.show_review %}
+<h4>*****</h4>
+{% endif %}
+
+<h4>{{ section.settings.tax_notice}}</h4>
+{% schema %}
+  {
+    "name": "Main text product",
+    "settings": [{
+		"id" : "tax_notice",
+		"type" : "text",
+		"label" : "Tax Notice"
+		},
+		{
+		"id" : "show_review",
+		"type" : "checkbox",
+		"label" : "Show review"
+		}
+]
+  }
+{% endschema %}
+
+

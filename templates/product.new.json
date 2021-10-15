@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-test-product",
+      "settings": {
+        "tax_notice": "Test notice",
+        "show_review": true
+      }
+    },
+    "second": {
+      "type": "main-test-product",
+      "settings": {
+        "tax_notice": "Test notice test",
+        "show_review": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "second"
+  ]
+}
